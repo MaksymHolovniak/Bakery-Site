@@ -1,0 +1,36 @@
+.input-form {
+  width: 100%;
+  padding: 16px 42px;
+  border: 1px solid var(--color-secondary-dark);
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 1.17;
+
+  &::placeholder {
+    color: var(--color-secondary-dark);
+    line-height: 1.17;
+  }
+
+  &:focus {
+    border-color: var(--color-brand-normal);
+  }
+
+  &:focus::placeholder {
+    color: var(--color-primary-dark);
+  }
+}
+
+.form-terms {
+  font-size: 12px;
+  font-weight: 500;
+  max-width: 220px;
+  text-align: center;
+  margin: 0 auto;
+
+  &__link {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}
