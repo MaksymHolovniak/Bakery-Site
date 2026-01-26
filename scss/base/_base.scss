@@ -1,8 +1,19 @@
+@use "../utils";
+
 body {
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Poppins", sans-serif;
   background-color: var(--color-primary-light);
-  font-size: 18px;
+  font-size: 14px;
   color: var(--color-primary-dark);
   line-height: 1.5;
+
+  @media (min-width: utils.$bp-tablet) {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }

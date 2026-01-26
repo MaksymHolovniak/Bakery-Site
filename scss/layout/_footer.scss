@@ -41,10 +41,7 @@
     gap: 20px;
   }
 
-  &__logo {
-    flex-grow: 1;
-  }
-
+  &__logo,
   &__menu {
     flex-grow: 1;
   }
@@ -52,6 +49,21 @@
   &__contacts,
   &__address-info {
     flex-grow: 1;
+  }
+
+  &__menu,
+  &__address-list,
+  &__address-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__socials {
+    margin-top: 16px;
+    display: flex;
+    gap: 22px;
+    align-items: center;
   }
 
   &__socials-icon {

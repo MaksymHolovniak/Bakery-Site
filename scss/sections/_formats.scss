@@ -9,12 +9,11 @@
     gap: 32px;
   }
 
-  &__list {
-    display: flex;
-    gap: 20px;
+  &__container {
+    overflow: hidden;
   }
 
-  &__item {
-    flex: 1;
+  &__list {
+    margin-bottom: 32px;
   }
 }

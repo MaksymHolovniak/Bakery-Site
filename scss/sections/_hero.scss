@@ -1,5 +1,7 @@
+@use "../utils";
+
 .hero-section {
-  padding: 272px 0;
+  padding: 124px 0;
   background-image:
     linear-gradient(
       127deg,
@@ -7,15 +9,48 @@
       rgba(18, 18, 17, 0.6) 63.89%,
       rgba(18, 18, 17, 0) 100%
     ),
-    url("../images/header-background.jpg");
+    url("../images/hero-section-background.jpg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
 
+  @media (min-width: utils.$bp-tablet) {
+    padding: 272px 0;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image:
+      linear-gradient(
+        127deg,
+        rgba(18, 18, 17, 0.78) 0%,
+        rgba(18, 18, 17, 0.6) 63.89%,
+        rgba(18, 18, 17, 0) 100%
+      ),
+      url("../images/hero-section-background@2x.jpg");
+  }
+
   &__title {
     font-weight: 900;
-    font-size: 128px;
+    font-size: 62px;
+    line-height: 1;
     color: var(--color-primary-light);
     text-align: center;
+    margin-bottom: 48px;
+
+    @media (min-width: utils.$bp-desktop) {
+      font-size: 128px;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+
+    @media (min-width: utils.$bp-desktop) {
+      display: none;
+    }
   }
 }

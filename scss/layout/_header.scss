@@ -1,14 +1,30 @@
+@use "../utils";
+
 .header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 32px;
+  padding-top: 16px;
+
+  @media (min-width: utils.$bp-desktop) {
+    padding-top: 32px;
+  }
 
   &__container {
     display: flex;
     align-items: center;
     gap: 40px;
+  }
+
+  &__logo {
+    width: 72px;
+    height: 38px;
+
+    @media (min-width: utils.$bp-tablet) {
+      width: 114px;
+      height: 56px;
+    }
   }
 
   &__nav {
@@ -19,9 +35,32 @@
   }
 
   &__menu {
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    gap: 64px;
+    display: none;
+
+    @media (min-width: utils.$bp-tablet) {
+      display: flex;
+      flex-grow: 1;
+      justify-content: center;
+      gap: 64px;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @media (min-width: utils.$bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__burger {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    fill: var(--color-primary-light);
+
+    @media (min-width: utils.$bp-tablet) {
+      display: none;
+    }
   }
 }

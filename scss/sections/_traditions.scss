@@ -1,8 +1,14 @@
-.traditions-section {
-  padding-top: 96px;
+@use "../utils";
 
+.traditions-section {
+  padding-top: 20px;
+
+  @media (min-width: utils.$bp-tablet) {
+    padding-top: 96px;
+  }
   &__container {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 40px;
   }
@@ -12,19 +18,38 @@
   }
 
   &__title {
-    margin-bottom: 42px;
+    margin-bottom: 24px;
+
+    @media (min-width: utils.$bp-tablet) {
+      margin-bottom: 42px;
+    }
   }
 
   &__text {
     &:not(:last-child) {
-      margin-bottom: 42px;
+      margin-bottom: 16px;
+
+      @media (min-width: utils.$bp-desktop) {
+        margin-bottom: 42px;
+      }
     }
     &--limited {
-      max-width: 330px;
+      @media (min-width: utils.$bp-tablet) {
+        max-width: 330px;
+      }
     }
   }
 
   &__image {
     border-radius: 400px 400px 0 0;
+    display: none;
+    @media (min-width: utils.$bp-tablet) {
+      display: block;
+      width: 350px;
+    }
+    @media (min-width: utils.$bp-desktop) {
+      display: block;
+      width: 393px;
+    }
   }
 }

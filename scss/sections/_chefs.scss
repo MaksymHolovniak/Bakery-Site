@@ -1,15 +1,27 @@
+@use "../utils";
+
 .chefs-section {
   &__title {
     position: relative;
-    margin: 0 auto 80px;
+    margin: 0 auto 24px;
+
+    @media (min-width: utils.$bp-tablet) {
+      display: block;
+      margin-bottom: 80px;
+    }
 
     &::before,
     &::after {
+      display: none;
       position: absolute;
       width: 352px;
       border: 2px solid var(--color-brand-light);
       content: "";
       bottom: 23px;
+
+      @media (min-width: utils.$bp-desktop) {
+        display: block;
+      }
     }
 
     &::before {
@@ -22,7 +34,12 @@
 
   &__list {
     display: flex;
+    flex-direction: column;
     gap: 30px;
+
+    @media (min-width: utils.$bp-tablet) {
+      flex-direction: row;
+    }
   }
 
   &__item {
