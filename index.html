@@ -29,7 +29,7 @@
             </a>
             <ul class="header__menu">
               <li>
-                <a class="nav-link" href="#tradtions-section">Наші традиції</a>
+                <a class="nav-link" href="#traditions-section">Наші традиції</a>
               </li>
               <li><a class="nav-link" href="#chefs-section">Шеф-кухарі</a></li>
               <li><a class="nav-link" href="#formats-section">Формати</a></li>
@@ -42,7 +42,11 @@
           >
             Замовити дзвінок
           </button>
-          <button class="header__burger menu-btn-open" type="button">
+          <button
+            class="header__burger menu-btn-open"
+            type="button"
+            aria-label="Відкрити меню"
+          >
             <svg width="24" height="24">
               <use href="./images/icons.svg#icon-burger"></use>
             </svg>
@@ -119,7 +123,7 @@
                 <img
                   class="chef-card__photo"
                   src="./images/nastya-chef.jpg"
-                  alt="Nastya chef"
+                  alt="Шеф-кухар Настя"
                 />
                 <div>
                   <h3 class="chef-card__title">Настя</h3>
@@ -138,7 +142,7 @@
                 <img
                   class="chef-card__photo"
                   src="./images/vlad-chef.jpg"
-                  alt="Vlad chef"
+                  alt="Шеф-кухар Влад"
                 />
                 <div>
                   <h3 class="chef-card__title">Влад</h3>
@@ -359,6 +363,7 @@
               </form>
             </div>
             <iframe
+              title="Мапа пекарні Shop Bakery"
               class="contact-section__map"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10160.654429721206!2d30.491273!3d50.456678!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2z0LLRg9C70LjRhtGPINCh0ZbRh9C-0LLQuNGFINCh0YLRgNGW0LvRjNGG0ZbQsiwgNTQsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1suk!2sua!4v1768046419758!5m2!1suk!2sua"
               allowfullscreen=""
@@ -436,13 +441,18 @@
     </footer>
 
     <div class="backdrop is-hidden">
-      <div class="modal">
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
         <button class="modal__btn-close modal-btn-close" type="button">
           <svg width="32" height="32">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
-        <h2 class="modal__title">Замовити дзвінок</h2>
+        <h2 id="modal-title" class="modal__title">Замовити дзвінок</h2>
         <p class="modal__text">
           Залишіть заявку та наш спеціаліст зв'яжеться з Вами!
         </p>
@@ -495,7 +505,11 @@
       </div>
     </div>
     <div class="mobile-menu">
-      <button class="mobile-menu__btn-close menu-btn-close" type="button">
+      <button
+        class="mobile-menu__btn-close menu-btn-close"
+        type="button"
+        aria-label="Закрити меню"
+      >
         <svg width="24" height="24">
           <use href="./images/icons.svg#icon-close"></use>
         </svg>
@@ -509,7 +523,7 @@
       </a>
       <ul class="mobile-menu__list">
         <li>
-          <a class="mobile-menu__link" href="#tradtions-section"
+          <a class="mobile-menu__link" href="#traditions-section"
             >Наші традиції</a
           >
         </li>
