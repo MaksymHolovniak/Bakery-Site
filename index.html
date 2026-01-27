@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
@@ -21,7 +21,11 @@
         <div class="header__container">
           <nav class="header__nav">
             <a href="/">
-              <img class="header__logo" src="./images/logo.svg" alt="Логотип сучасної пекарні" />
+              <img
+                class="header__logo"
+                src="./images/logo.svg"
+                alt="Логотип сучасної пекарні"
+              />
             </a>
             <ul class="header__menu">
               <li>
@@ -32,7 +36,10 @@
               <li><a class="nav-link" href="#contact-section">Контакти</a></li>
             </ul>
           </nav>
-          <button class="header__button main-button modal-btn-open" type="button">
+          <button
+            class="header__button main-button modal-btn-open"
+            type="button"
+          >
             Замовити дзвінок
           </button>
           <button class="header__burger menu-btn-open" type="button">
@@ -49,12 +56,9 @@
           <h1 class="hero-section__title">
             <span class="text-brand">Сучасна</span> пекарня
           </h1>
-          <button class="hero-section__button main-button modal-btn-open" type="button">
-            Замовити дзвінок
-          </button>
         </div>
       </section>
-  
+
       <section class="advantages-section">
         <div class="container">
           <h2 class="visually-hidden">Чому обирають нас?</h2>
@@ -156,7 +160,7 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="formats-section section" id="formats-section">
+      <section class="formats-section section" id="formats-section">
         <div class="container">
           <h2
             class="formats-section__title section__title section__title--centered"
@@ -164,7 +168,7 @@
             Формати
           </h2>
           <div class="formats-section__slider">
-            <button class="carousel-button__prev carousel-button" type="button">
+            <button class="carousel-button carousel-button__prev" type="button">
               <svg width="16" height="16">
                 <use href="./images/icons.svg#icon-arrow"></use>
               </svg>
@@ -282,19 +286,19 @@
                 <span class="pagination__button"></span>
               </div>
             </div>
-            <button class="carousel-button__next carousel-button" type="button">
+            <button class="carousel-button carousel-button__next" type="button">
               <svg width="16" height="16">
                 <use href="./images/icons.svg#icon-arrow"></use>
               </svg>
             </button>
           </div>
         </div>
-      </section> -->
-      <!-- <section class="contact-section section" id="contact-section">
+      </section>
+      <section class="contact-section section" id="contact-section">
         <div class="container">
           <div class="contact-section__container">
             <div class="contact-section__form">
-              <h2 class="contant-section__title section__title">
+              <h2 class="contact-section__title section__title">
                 Приєднуйся до мережі пекарень
               </h2>
               <p class="contact-section__text">
@@ -359,9 +363,9 @@
             ></iframe>
           </div>
         </div>
-      </section> -->
+      </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="footer__container">
           <nav class="footer__nav">
@@ -423,9 +427,9 @@
           </address>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
-    <!-- <div class="backdrop is-hidden">
+    <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal__btn-close modal-btn-close" type="button">
           <svg width="32" height="32">
@@ -483,23 +487,37 @@
           </p>
         </form>
       </div>
-    </div> -->
-     <div class="mobile-menu">
-        <button class="mobile-menu__btn-close menu-btn-close" type="button">
-          <svg width="24" height="24">
-            <use href="./images/icons.svg#icon-close"></use>
-          </svg>
-        </button>
-         <a href="/">
-            <img class="mobile-menu__logo" src="./images/logo-dark.svg" alt="Логотип сучасної пекарні" />
-          </a>
-           <ul class="mobile-menu__list">
-              <li><a class="mobile-menu__link" href="#tradtions-section">Наші традиції</a></li>
-              <li><a class="mobile-menu__link" href="#chefs-section">Шеф-кухарі</a></li>
-              <li><a class="mobile-menu__link" href="#formats-section">Формати</a></li>
-              <li><a class="mobile-menu__link" href="#contact-section">Контакти</a></li>
-            </ul>
-      </div>
+    </div>
+    <div class="mobile-menu">
+      <button class="mobile-menu__btn-close menu-btn-close" type="button">
+        <svg width="24" height="24">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <a href="/">
+        <img
+          class="mobile-menu__logo"
+          src="./images/logo-dark.svg"
+          alt="Логотип сучасної пекарні"
+        />
+      </a>
+      <ul class="mobile-menu__list">
+        <li>
+          <a class="mobile-menu__link" href="#tradtions-section"
+            >Наші традиції</a
+          >
+        </li>
+        <li>
+          <a class="mobile-menu__link" href="#chefs-section">Шеф-кухарі</a>
+        </li>
+        <li>
+          <a class="mobile-menu__link" href="#formats-section">Формати</a>
+        </li>
+        <li>
+          <a class="mobile-menu__link" href="#contact-section">Контакти</a>
+        </li>
+      </ul>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./js/formats-slider.js"></script>
     <script src="./js/mobile-menu.js"></script>

@@ -1,31 +1,73 @@
-.contact-section {
-  padding-bottom: 96px;
+@use "../utils";
 
+.contact-section {
+  padding-bottom: 0px;
+
+  @media (min-width: utils.$bp-tablet) {
+    padding-bottom: 96px;
+  }
   &__container {
     display: flex;
-    gap: 32px;
+    flex-direction: column;
+    gap: 24px;
+
+    @media (min-width: utils.$bp-tablet) {
+      flex-direction: row;
+      gap: 20px;
+    }
+     @media (min-width: utils.$bp-desktop) {
+      flex-direction: row;
+      gap: 32px;
+    }
   }
 
   &__title {
-    margin-bottom: 16px;
+    margin-bottom: 8px;
+
+    @media (min-width: utils.$bp-tablet) {
+      margin-bottom: 16px;
+    }
   }
 
   &__text {
-    margin-bottom: 42px;
+    margin-bottom: 24px;
+
+    @media (min-width: utils.$bp-tablet) {
+      margin-bottom: 42px;
+    }
   }
 
   &__map {
     flex-shrink: 0;
-    width: 600px;
-    height: 595px;
+    height: 176px;
     border: none;
-    border-radius: 16px;
+    margin: 0 -20px;
+
+    @media (min-width: utils.$bp-tablet) {
+      width: 280px;
+      height: 500px;
+      margin: auto;
+      border-radius: 16px;
+    }
+
+    @media (min-width: utils.$bp-desktop) {
+      width: 600px;
+      height: 595px;
+    }
   }
   &__form-field {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
+
+    @media (min-width: utils.$bp-tablet) {
+      margin-bottom: 24px;
+    }
   }
 
   &__button {
-    margin: 0 auto 16px;
+    margin: 0 auto;
+
+    @media (min-width: utils.$bp-tablet) {
+      margin-bottom: 16px;
+    }
   }
 }

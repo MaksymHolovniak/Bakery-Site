@@ -1,3 +1,5 @@
+@use "../utils";
+
 .footer {
   position: relative;
   background-image: url("../images/footer-background.png");
@@ -16,29 +18,65 @@
   }
 
   &::before {
-    left: 0;
-    background-image: url("./../images//decor-bread-small.png");
-    width: 180px;
-    height: 120px;
+    right: 0;
+    background-image: url("./../images//decor-bread-small-mobile.png");
+    width: 100px;
+    height: 90px;
+
+    @media (min-width: utils.$bp-tablet) {
+      left: 0;
+      background-image: url("./../images//decor-bread-small.png");
+      width: 180px;
+      height: 100px;
+    }
+
+    @media (min-width: utils.$bp-desktop) {
+      height: 120px;
+    }
   }
 
   &::after {
-    right: 0;
-    background-image: url("./../images/decor-bread-large.png");
-    width: 380px;
-    height: 190px;
+    width: 85px;
+    height: 205px;
+    top: 0;
+    left: 0;
+    background-image: url("./../images/decor-bread-large-mobile.png");
+
+    @media (min-width: utils.$bp-tablet) {
+      width: 380px;
+      height: 150px;
+      right: 0;
+      top: auto;
+      left: auto;
+      background-image: url("./../images/decor-bread-large.png");
+    }
+
+    @media (min-width: utils.$bp-desktop) {
+      height: 190px;
+    }
   }
 
   &__container {
     display: flex;
+    flex-direction: column;
     gap: 20px;
+
+    @media (min-width: utils.$bp-tablet) {
+      flex-direction: row;
+    }
   }
 
   &__nav,
   &__address {
     display: flex;
-    flex-basis: 50%;
+    flex-direction: column;
     gap: 20px;
+    text-align: center;
+    @media (min-width: utils.$bp-tablet) {
+      flex-direction: row;
+      flex-basis: 50%;
+      text-align: left;
+    }
   }
 
   &__logo,
@@ -64,6 +102,11 @@
     display: flex;
     gap: 22px;
     align-items: center;
+    justify-content: center;
+
+    @media (min-width: utils.$bp-tablet) {
+      justify-content: flex-start;
+    }
   }
 
   &__socials-icon {
@@ -77,12 +120,16 @@
 
   &__address-link {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 14px;
     transition: color 0.3s;
     color: var(--color-primary-light);
 
     &:hover {
       color: var(--color-brand-normal);
+    }
+
+    @media (min-width: utils.$bp-tablet) {
+      font-size: 16px;
     }
   }
 

@@ -1,6 +1,13 @@
+@use "../utils";
+
 .formats-section {
   &__title {
-    margin-bottom: 80px;
+    margin-bottom: 24px;
+
+    @media (min-width: utils.$bp-tablet) {
+      margin-bottom: 80px;
+      
+    }
   }
 
   &__slider {
